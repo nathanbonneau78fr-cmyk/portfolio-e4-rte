@@ -5,6 +5,7 @@ import { toSlug } from "@/lib/toSlug";
 import Link from "next/link";
 import Image from "next/image";
 import CompetencePictBadge from "@/components/CompetencePictBadge";
+import type { CompetenceCode } from "@/components/CompetencePictBadge";
 
 export default async function RealisationDetailPage({
   params
@@ -45,7 +46,7 @@ export default async function RealisationDetailPage({
         <h2 className="text-xl font-semibold text-ink-50">{r.titre}</h2>
 
         <div className="mt-4 flex flex-wrap gap-2">
-         {r.competences.map((c) => (
+        {r.competences.map((c: CompetenceCode) => (
   <CompetencePictBadge key={c} code={c} size="sm" />
 ))}
         </div>

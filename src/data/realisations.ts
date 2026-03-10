@@ -1,3 +1,20 @@
+import type { CompetenceCode } from "@/components/CompetencePictBadge";
+
+export type PreuvePdf = {
+  label: string;
+  href: string;
+};
+
+export type Realisation = {
+  titre: string;
+  contexte: string;
+  categorie: "formation" | "professionnel";
+  preuvesPdfAssociees: PreuvePdf[];
+  image?: string;
+  imageAlt?: string;
+  competences: CompetenceCode[];
+};
+
 export const realisations: Realisation[] = [
   {
   titre:
