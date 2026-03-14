@@ -194,55 +194,78 @@ export const realisations: Realisation[] = [
     competences: ["C1", "C5"],
     preuvesPdfAssociees: [
   {
-  label: "Lab SSH",
-  href: encodeURI(
-    "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/lab-ssh.pdf"
-  )
-},
+    label: "Lab SSH",
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/lab-ssh.pdf"
+    )
+  },
   {
     label: "Mécanismes de protection (pare-feu, antivirus)",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/mecanismes-protection-pare-feu-antivirus.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/mecanismes-protection-pare-feu-antivirus.pdf"
+    )
   },
   {
     label: "Normes et cadres réglementaires (comme ISO 27001, RGPD, etc.)",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/normes-cadres-reglementaires-iso-27001-rgpd.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/normes-cadres-reglementaires-iso-27001-rgpd.pdf"
+    )
   },
   {
     label: "Pare-feu (firewall)",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/pare-feu-firewall.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/pare-feu-firewall.pdf"
+    )
   },
   {
     label: "Pare-feu, IDS-IPS, solutions antimalware",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/pare-feu-ids-ips-antimalware.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/pare-feu-ids-ips-antimalware.pdf"
+    )
   },
   {
     label: "Politiques de sécurité et plans de reprise d'activité",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/politiques-securite-plans-reprise-activite.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/politiques-securite-plans-reprise-activite.pdf"
+    )
   },
   {
     label: "Politiques de sécurité",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/politiques-securite.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/politiques-securite.pdf"
+    )
   },
   {
     label: "Principes de base de la sécurité informatique",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/principes-base-securite-informatique.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/principes-base-securite-informatique.pdf"
+    )
   },
   {
     label: "Systèmes de détection et de prévention des intrusions (IDS-IPS)",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/systemes-detection-prevention-intrusions-ids-ips.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/systemes-detection-prevention-intrusions-ids-ips.pdf"
+    )
   },
   {
     label: "Tests de pénétration",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/tests-penetration.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/tests-penetration.pdf"
+    )
   },
   {
     label: "VPN, chiffrement, authentification",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/vpn-chiffrement-authentification.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/vpn-chiffrement-authentification.pdf"
+    )
   },
   {
     label: "Vulnérabilités courantes (comme l'injection SQL, cross-site scripting, etc.)",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/vulnerabilites-courantes-injection-sql-xss.pdf"
+    href: encodeURI(
+      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/vulnerabilites-courantes-injection-sql-xss.pdf"
+    )
   }
+
 ]
   },
   {
