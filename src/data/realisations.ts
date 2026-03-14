@@ -194,9 +194,11 @@ export const realisations: Realisation[] = [
     competences: ["C1", "C5"],
     preuvesPdfAssociees: [
   {
-    label: "Lab SSH",
-    href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/lab-ssh.pdf"
-  },
+  label: "Lab SSH",
+  href: encodeURI(
+    "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/securisation-systeme-information-pare-feu-regles-filtrage/lab-ssh.pdf"
+  )
+},
   {
     label: "Mécanismes de protection (pare-feu, antivirus)",
     href: "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/Sécurisation-du-système-d’information-par-pare-feu-et-règles-de-filtrage/mecanismes-protection-pare-feu-antivirus.pdf"

@@ -184,7 +184,7 @@ export default function AboutPage() {
 
             <ResumeEntry
               variant="professional"
-              logo="/logos/inli.png"
+              logo="/logos/INLI.png"
               logoAlt="Logo IN'LI"
               titre="Stage – Technicien SI"
               structure="IN'LI"
