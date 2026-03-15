@@ -326,11 +326,9 @@ export const realisations: Realisation[] = [
     )
   },
   {
-    label: "Bloc 2 - VLAN",
-    href: encodeURI(
-      "/preuves/NATHAN E5/Réalisation-en-cours-de-formation/creation-administration-reseau-local-adressage-ip-vlan-connectivite/bloc2-vlan.pdf"
-    )
-  },
+  label: "Bloc 2 - VLAN",
+  href: "/preuves/e5/formation/reseau-local/bloc2-vlan.pdf"
+},
   {
     label: "Modèle OSI",
     href: encodeURI(
