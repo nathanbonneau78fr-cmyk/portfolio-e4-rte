@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio E4 — BTS SIO SISR (RTE)",
+  title: "Portfolio E5",
   description:
     "Portfolio E4 — Support et mise à disposition de services informatiques — BTS SIO SISR (alternance RTE)."
 };

@@ -7,7 +7,7 @@ import RealisationCard from "@/components/RealisationCard";
 type Filter = "all" | "formation" | "professionnel";
 
 export default function RealisationsFilterGrid({
-  realisations
+  realisations,
 }: {
   realisations: Realisation[];
 }) {
@@ -30,67 +30,76 @@ export default function RealisationsFilterGrid({
     return realisations.filter((r) => r.categorie === filter);
   }, [realisations, filter]);
 
-  const btn = (active: boolean) =>
-    [
-      "rounded-lg px-3 py-2 text-sm font-semibold transition",
-      "border border-ink-800/70",
-      active
-        ? "bg-accent-500 text-black"
-        : "bg-ink-900/25 text-ink-100 hover:bg-ink-900/40"
-    ].join(" ");
+  const btnClass = (active: boolean, tone: "all" | "formation" | "professionnel") => {
+    const base =
+      "rounded-xl border px-4 py-2 text-sm font-semibold transition duration-200";
+    if (active) {
+      if (tone === "all") {
+        return `${base} border-cyan-300/30 bg-cyan-400 text-slate-950 shadow-[0_0_24px_rgba(34,211,238,0.24)]`;
+      }
+      if (tone === "formation") {
+        return `${base} border-fuchsia-300/30 bg-fuchsia-400 text-slate-950 shadow-[0_0_24px_rgba(217,70,239,0.24)]`;
+      }
+      return `${base} border-blue-300/30 bg-blue-400 text-slate-950 shadow-[0_0_24px_rgba(96,165,250,0.24)]`;
+    }
 
-  // Mets la classe glow que tu utilises pour la page Réalisations
-  // (si tu as échangé Réalisations/Contact, remplace par "glow-rgb-contact")
-  const glowClass = "glow-rgb-realisations";
+    return `${base} border-white/10 bg-white/5 text-white hover:bg-white/10`;
+  };
 
   return (
-    <>
-      {/* Bannière + filtre fusionnés */}
-      <div
-        className={`${glowClass} mb-6 rounded-2xl border border-ink-800/70 bg-ink-900/20 p-4 shadow-soft`}
-      >
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-ink-300">
-              Parcours de professionnalisation
-            </p>
-            <p className="mt-1 text-sm text-ink-100">
-              Les fiches ci-dessous présentent une sélection de mes réalisations en formation et en contexte professionnel.
-            </p>
+    <div className="space-y-6">
+      <div className="relative overflow-hidden rounded-3xl border border-cyan-400/20 bg-slate-950/70 p-5 shadow-[0_0_40px_rgba(34,211,238,0.08)] backdrop-blur-xl">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.10),transparent_28%)]" />
+
+        <div className="relative">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]">
+                Parcours de professionnalisation
+              </span>
+
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-300">
+                Les fiches ci-dessous présentent une sélection de mes
+                réalisations en formation et en contexte professionnel.
+              </p>
+            </div>
+
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white">
+              {counts.all} fiches
+            </span>
           </div>
 
-          <span className="rounded-full border border-ink-700/70 bg-ink-900/35 px-3 py-1 text-xs font-semibold text-ink-100">
-            {counts.all} fiches
-          </span>
-        </div>
+          <div className="mt-5 flex flex-wrap gap-3 border-t border-white/10 pt-5">
+            <button
+              type="button"
+              className={btnClass(filter === "all", "all")}
+              onClick={() => setFilter("all")}
+              aria-pressed={filter === "all"}
+            >
+              Vue d’ensemble ({counts.all})
+            </button>
 
-        <div className="mt-4 flex flex-wrap gap-2 border-t border-ink-800/60 pt-4">
-          <button
-            type="button"
-            className={btn(filter === "all")}
-            onClick={() => setFilter("all")}
-            aria-pressed={filter === "all"}
-          >
-            Vue d’ensemble ({counts.all})
-          </button>
+            <button
+              type="button"
+              className={btnClass(filter === "formation", "formation")}
+              onClick={() => setFilter("formation")}
+              aria-pressed={filter === "formation"}
+            >
+              Contexte de formation ({counts.formation})
+            </button>
 
-          <button
-            type="button"
-            className={btn(filter === "formation")}
-            onClick={() => setFilter("formation")}
-            aria-pressed={filter === "formation"}
-          >
-            Contexte de formation ({counts.formation})
-          </button>
-
-          <button
-            type="button"
-            className={btn(filter === "professionnel")}
-            onClick={() => setFilter("professionnel")}
-            aria-pressed={filter === "professionnel"}
-          >
-            Contexte professionnel ({counts.professionnel})
-          </button>
+            <button
+              type="button"
+              className={btnClass(
+                filter === "professionnel",
+                "professionnel"
+              )}
+              onClick={() => setFilter("professionnel")}
+              aria-pressed={filter === "professionnel"}
+            >
+              Contexte professionnel ({counts.professionnel})
+            </button>
+          </div>
         </div>
       </div>
 
@@ -99,6 +108,6 @@ export default function RealisationsFilterGrid({
           <RealisationCard key={r.titre} r={r} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
