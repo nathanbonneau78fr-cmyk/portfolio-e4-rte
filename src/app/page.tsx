@@ -44,15 +44,6 @@ export default function HomePage() {
               compétences, mes réalisations professionnelles et ma veille
               technologique dans le domaine des systèmes et réseaux.
             </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/realisations"
-                className="inline-flex rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_24px_rgba(34,211,238,0.24)] transition hover:bg-cyan-300"
-              >
-                Voir mes réalisations
-              </Link>
-            </div>
           </div>
         </div>
 

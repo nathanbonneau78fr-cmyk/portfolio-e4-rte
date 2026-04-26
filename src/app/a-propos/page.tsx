@@ -200,20 +200,20 @@ export default function AboutPage() {
               </p>
 
               <div className="mt-6">
-                <a
-                  href="/documents/organigramme-service.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_24px_rgba(34,211,238,0.24)] transition hover:bg-cyan-300"
-                >
-                  Voir le PDF
-                </a>
+               <a
+  href="/documents/organigramme-service.pdf"
+  target="_blank"
+  rel="noreferrer"
+  className="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_20px_rgba(34,211,238,0.25)] transition hover:bg-cyan-300"
+>
+  Voir le PDF
+</a>
               </div>
 
               <p className="mt-3 text-xs text-slate-400">
-                Mets ton fichier dans{" "}
+                {" "}
                 <span className="text-slate-300">
-                  public/documents/organigramme-service.pdf
+                 
                 </span>
               </p>
             </div>
